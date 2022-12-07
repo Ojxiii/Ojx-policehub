@@ -1,0 +1,115 @@
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0%;
+    margin: 0%;
+    font-family: calibri;
+    color: white;
+}
+
+* {
+    user-select: none;
+}
+
+.app {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 7%;
+    width: 13%;
+    height: auto;
+
+    background-color:#37373600;
+}
+
+.title {
+    padding: 1.4%;
+    border-bottom: #36aca2 solid 3.7px;
+    background-color: #222223;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.3vh;
+}
+
+.officers {
+    width: 100%;
+    height: auto;
+    padding-bottom: 0.2%;
+    margin-bottom: 0.5%;
+    background-color:#373637c6;
+}
+
+.officer {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    margin-left: 1%;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+}
+
+.officers .callsign {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    border-radius: 3px;
+    margin-left: 1%;
+}
+
+.officers .callsign-command {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    border-radius: 3px;
+    margin-left: 1%;
+}
+
+.officers .callsign-swat {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    border-radius: 3px;
+    margin-left: 1%;
+}
+
+.officers .callsign-rangers {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    border-radius: 3px;
+    margin-left: 1%;
+}
+
+.officers .callsign-bcso {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    border-radius: 3px;
+    margin-left: 1%;
+}
+
+.officers .callsign-troopers {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    border-radius: 3px;
+    margin-left: 1%;
+}
+
+.officers .callsign-detective {
+    font-size: 1.2vh;
+    padding: 1.4%;
+    border-radius: 3px;
+    margin-left: 1%;
+}
+
+.officers .name {
+    margin-left: 1%;
+}
+
+.duty {
+    color: rgb(26, 213, 207);
+}
+
+.offduty {
+    color:rgb(222, 222, 222);
+}
+
+.radio {
+    color:rgb(255,255,255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
