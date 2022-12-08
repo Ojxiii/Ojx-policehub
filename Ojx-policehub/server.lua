@@ -64,7 +64,7 @@ AddEventHandler("Ojx:officers:refresh", function()
             local radioLabel = ""
 
             if radioChannel == 0 then
-                radioLabel = "Off"
+                radioLabel = "Not in Radio"
             else
                 radioLabel = radioChannel .. 'hz'
             end
@@ -72,19 +72,19 @@ AddEventHandler("Ojx:officers:refresh", function()
             local callSign = CallSigns[xPlayer.PlayerData.license] ~= nil and CallSigns[xPlayer.PlayerData.license] or "NO TAG"
 
             if (callSign >= Config.Command_Min and callSign <= Config.Command_Max) then
-                new = new .. '<div class="officer"><span class="callsign-command">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span>'
+                new = new .. '<div class="officer"><span class="callsign-command">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span> <span class="radio">' .. radioLabel .. '</span></div>'
             elseif (callSign >= Config.Detective_Min and callSign <= Config.Detective_Max) then
-                new = new .. '<div class="officer"><span class="callsign-detective">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span>'
+                new = new .. '<div class="officer"><span class="callsign-detective">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span> <span class="radio">' .. radioLabel .. '</span></div>'
             elseif (callSign >= Config.Swat_Min and callSign <= Config.Swat_Max) then
-                new = new .. '<div class="officer"><span class="callsign-swat">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span>'
+                new = new .. '<div class="officer"><span class="callsign-swat">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span> <span class="radio">' .. radioLabel .. '</span></div>'
             elseif (callSign >= Config.Bcso_Min and callSign <= Config.Bcso_Max) then
-                new = new .. '<div class="officer"><span class="callsign-bcso">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span>'
+                new = new .. '<div class="officer"><span class="callsign-bcso">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span> <span class="radio">' .. radioLabel .. '</span></div>'
             elseif (callSign >= Config.Troopers_Min and callSign <= Config.Troopers_Min) then
-                new = new .. '<div class="officer"><span class="callsign-troopers">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span'
+                new = new .. '<div class="officer"><span class="callsign-troopers">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span> <span class="radio">' .. radioLabel .. '</span></div>'
             elseif (callSign >= Config.Rangers_Min and callSign <= Config.Rangers_Min) then
-                new = new .. '<div class="officer"><span class="callsign-rangers">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span>'
+                new = new .. '<div class="officer"><span class="callsign-rangers">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span> <span class="radio">' .. radioLabel .. '</span></div>'
             else
-                new = new .. '<div class="officer"><span class="callsign">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span>'
+                new = new .. '<div class="officer"><span class="callsign">' .. callSign .. '</span> <span class="name">' .. name .. '</span> | <span class="grade">' .. xPlayer.PlayerData.job.grade.name .. '</span> <span class="' .. dutyClass .. '">' .. duty .. '</span> <span class="radio">' .. radioLabel .. '</span></div>'
             end
         end
     end
